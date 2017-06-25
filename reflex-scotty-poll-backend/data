@@ -2,7 +2,7 @@
   { name = "start"
   , intro = "Example poll"
   , background = "bg.jpg"
-  , picture = ""
+  , picture = "1px.png"
   , choices = 
     [ Choice 
       { msg = "Start!"
@@ -14,7 +14,7 @@
   { name = "node1"
   , intro = "Example question"
   , background = "bg.jpg"
-  , picture = ""
+  , picture = "1px.png"
   , choices = 
     [ Choice 
       { msg = "Answer A"
@@ -30,7 +30,7 @@
   { name = "nodeA"
   , intro = "You chose A"
   , background = "bg.jpg"
-  , picture = ""
+  , picture = "1px.png"
   , choices = 
     [ Choice 
       { msg = "Go to end"
@@ -42,7 +42,7 @@
   { name = "nodeB"
   , intro = "You chose B"
   , background = "bg.jpg"
-  , picture = ""
+  , picture = "1px.png"
   , choices = 
     [ Choice 
       { msg = "Go to end"
@@ -54,7 +54,7 @@
   { name = "nodeEnd"
   , intro = "The End."
   , background = "bg.jpg"
-  , picture = ""
+  , picture = "1px.png"
   , choices = []
   }
 ]
