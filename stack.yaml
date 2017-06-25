@@ -1,10 +1,14 @@
-resolver: ghc-8.0.1
+resolver: lts-8.20
 
 nix:
   enable: false
-system-ghc: true
+system-ghc: false
 
 skip-ghc-check: true
 
 packages:
 - '.'
+
+extra-deps:
+- heroku-0.1.2.3
+- scotty-cookie-0.1.0.3

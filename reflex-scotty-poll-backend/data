@@ -1,0 +1,60 @@
+[ Node 
+  { name = "start"
+  , intro = "Example poll"
+  , background = "bg.jpg"
+  , picture = ""
+  , choices = 
+    [ Choice 
+      { msg = "Start!"
+      , next = "node1"
+      }
+    ]
+  }
+, Node 
+  { name = "node1"
+  , intro = "Example question"
+  , background = "bg.jpg"
+  , picture = ""
+  , choices = 
+    [ Choice 
+      { msg = "Answer A"
+      , next = "nodeA"
+      }
+    , Choice 
+      { msg = "Answer B"
+      , next = "nodeB"
+      }
+    ]
+  }
+, Node 
+  { name = "nodeA"
+  , intro = "You chose A"
+  , background = "bg.jpg"
+  , picture = ""
+  , choices = 
+    [ Choice 
+      { msg = "Go to end"
+      , next = "nodeEnd"
+      }
+    ]
+  }
+, Node 
+  { name = "nodeB"
+  , intro = "You chose B"
+  , background = "bg.jpg"
+  , picture = ""
+  , choices = 
+    [ Choice 
+      { msg = "Go to end"
+      , next = "nodeEnd"
+      }
+    ]
+  }
+, Node 
+  { name = "nodeEnd"
+  , intro = "The End."
+  , background = "bg.jpg"
+  , picture = ""
+  , choices = []
+  }
+]

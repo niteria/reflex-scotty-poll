@@ -1,0 +1,8 @@
+set -ex
+BASE=$(realpath $(dirname $0))
+source $BASE/variables
+
+$BASE/nix-front-build
+cd $BACK_DIR
+stack build
+ln -s $BASE/out/$FRONT_DIR.jsexe/ $BASE/$BACK_DIR/static

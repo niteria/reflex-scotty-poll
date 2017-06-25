@@ -1,0 +1,43 @@
+name:                reflex-scotty-poll-backend
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+executable reflex-scotty-poll-backend
+  main-is:             Main.hs
+  other-modules:       Model,
+                       Auth,
+                       View,
+                       Handlers
+  build-depends:       base,
+                       aeson,
+                       blaze-html,
+                       bytestring,
+                       containers,
+                       heroku,
+                       http-types,
+                       monad-logger,
+                       persistent,
+                       persistent-postgresql,
+                       persistent-sqlite,
+                       persistent-template,
+                       random,
+                       resourcet,
+                       scotty,
+                       scotty-cookie,
+                       securemem,
+                       text,
+                       time,
+                       transformers,
+                       wai,
+                       wai-extra,
+                       wai-middleware-static
+  default-language:    Haskell2010
+  default-extensions:  DataKinds,
+                       DeriveGeneric,
+                       OverloadedStrings,
+                       TypeFamilies,
+                       TypeOperators

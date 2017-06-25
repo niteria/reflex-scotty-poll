@@ -1,2 +1,3 @@
 set -e
 FRONT_DIR=reflex-scotty-poll-frontend
+BACK_DIR=reflex-scotty-poll-backend

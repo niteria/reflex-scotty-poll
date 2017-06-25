@@ -10,6 +10,10 @@ DEST_DIR=$BASE/out/$FRONT_DIR.jsexe
 mkdir -p $DEST_DIR/
 cp $BASE/$FRONT_DIR/dist/build/$FRONT_DIR/$FRONT_DIR.jsexe/all.js $DEST_DIR/
 cp -r $BASE/static/* $DEST_DIR/
+# create index.html
+(cd $BASE/$BACK_DIR/; \
+  sed -e '/DATADATA/ {' -e 'r data' -e 'd' -e '}' index.html.tpl \
+  ) > $DEST_DIR/index.html
 ccjs $DEST_DIR/all.js --compilation_level=ADVANCED_OPTIMIZATIONS > $DEST_DIR/all.min.js
 rm $DEST_DIR/all.js
 echo file://$(realpath $DEST_DIR/index.html)
