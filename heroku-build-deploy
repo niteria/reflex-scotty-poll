@@ -1,0 +1,7 @@
+set -ex
+BASE=$(realpath $(dirname $0))
+source $BASE/variables
+
+git submodule update --init
+$BASE/nix-front-release
+$BASE/heroku-push

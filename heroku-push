@@ -1,0 +1,14 @@
+set -ex
+BASE=$(realpath $(dirname $0))
+source $BASE/variables
+
+git checkout -B heroku-push master
+# nasty hack, this is all kind of meh, but I don't want to set up
+# nix and ccjs for heroku
+cp $BASE/out/$FRONT_DIR.jsexe/* static/
+cat stack.yaml.heroku.patch | patch -p1
+git add static stack.yaml
+git commit -m"Pre-built resources"
+git push -f heroku HEAD:master
+git checkout master
+git branch -D heroku-push
