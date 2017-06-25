@@ -1,0 +1,3 @@
+BASE=$(realpath $(dirname $0))
+nix-shell -p 'import '$BASE \
+  --command "./front-release"

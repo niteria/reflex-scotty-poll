@@ -1,0 +1,7 @@
+set -e
+BASE=$(realpath $(dirname $0))
+source $BASE/variables
+
+cd $BASE/$FRONT_DIR/
+cabal configure
+cabal repl

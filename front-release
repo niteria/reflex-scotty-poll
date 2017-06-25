@@ -1,0 +1,15 @@
+set -ex
+BASE=$(realpath $(dirname $0))
+source $BASE/variables
+
+cd $BASE/$FRONT_DIR/
+cabal configure --ghcjs
+cabal build --ghcjs-options="-DGHCJS_BROWSER -O2 -dedupe"
+rm -rf $BASE/out/
+DEST_DIR=$BASE/out/$FRONT_DIR.jsexe
+mkdir -p $DEST_DIR/
+cp $BASE/$FRONT_DIR/dist/build/$FRONT_DIR/$FRONT_DIR.jsexe/all.js $DEST_DIR/
+cp -r $BASE/static/* $DEST_DIR/
+ccjs $DEST_DIR/all.js --compilation_level=ADVANCED_OPTIMIZATIONS > $DEST_DIR/all.min.js
+rm $DEST_DIR/all.js
+echo file://$(realpath $DEST_DIR/index.html)

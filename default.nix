@@ -11,9 +11,15 @@ let
       # ghc (it can't be done with ghcjs because of the dependency on
       # the ghci/intero repl)
       reflex-dom
+      http-types
+      string-conv
+      unicode-show
     ]);
   ghcjs-env = reflexPkgs.ghcjs.ghcWithPackages (p: with p; [
       reflex-dom
+      http-types
+      string-conv
+      unicode-show
     ]);
 in pkgs.buildEnv {
   name = "ghc-and-ghcjs-env";

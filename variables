@@ -1,0 +1,2 @@
+set -e
+FRONT_DIR=reflex-scotty-poll-frontend
