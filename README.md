@@ -65,3 +65,5 @@ Known problems
 --------------
 
 - Poor diagnostics with badly formatted questions
+- Allows multiple submissions, makes a feeble attempt at keeping the identity
+- No real protection from the client modifying the question structure, no proof-of-work
