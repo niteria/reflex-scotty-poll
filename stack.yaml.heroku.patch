@@ -1,0 +1,13 @@
+diff --git a/stack.yaml b/stack.yaml
+index 1bc3728..d76389a 100644
+--- a/stack.yaml
++++ b/stack.yaml
+@@ -7,7 +7,7 @@ system-ghc: false
+ skip-ghc-check: true
+ 
+ packages:
+-- '.'
++- 'reflex-scotty-poll-backend'
+ 
+ extra-deps:
+ - heroku-0.1.2.3
