@@ -18,8 +18,9 @@ Building
 --------
 
 1. Clone the repository
-2. `./nix-front-build`
-3. Open the last printed `file://` in the browser
+2. `git submodule update --init`
+3. `./nix-front-build`
+4. Open the last printed `file://` in the browser
 
 Deployment
 ----------
