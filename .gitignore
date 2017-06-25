@@ -4,3 +4,4 @@ out
 dev.sqlite3
 cabal.sandbox.config
 *.swp
+reflex-scotty-poll-backend/static
